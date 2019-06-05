@@ -39,7 +39,7 @@ describe 'CashRegister' do
   end
 
   describe '#apply_discount' do
-    context 'the cash register was initialized with an employee discount' do
+    context 'the cash register that was initialized with an employee discount' do
       it 'applies the discount to the total price' do
         cash_register_with_discount.add_item("macbook air", 1000)
         cash_register_with_discount.apply_discount
