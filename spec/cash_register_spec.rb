@@ -51,9 +51,11 @@ describe 'CashRegister' do
         expect(cash_register_with_discount.apply_discount).to eq("After the discount, the total comes to $800.")
       end
 
-      it 'reduces the total' do
+      it 'reduces the total' do       #############
         cash_register.total = 0
+        puts ("cash_register.total is :  #{cash_register.total}")   # I added
         cash_register_with_discount.add_item("macbook air", 1000)
+            puts ("cash_register.total is *now*...:  #{cash_register.total}")  
         expect{cash_register_with_discount.apply_discount}.to change{cash_register_with_discount.total}.by(-200)
       end
     end
